@@ -5,6 +5,7 @@ import io.vertx.ext.web.Router
 /**
  * @author tony.zhuby
  */
-abstract class RouterHandler(protected val router: Router) {
-    abstract fun setupRouter()
+interface RouterHandler {
+    val router: Router
+    fun setupRouter()
 }

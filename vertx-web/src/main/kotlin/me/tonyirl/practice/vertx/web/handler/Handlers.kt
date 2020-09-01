@@ -14,14 +14,14 @@ import java.net.URL
  */
 
 fun classpathResource(file: String): URL? {
-    return Thread.currentThread().contextClassLoader.getResource(file)
+    return RouterHandler::class.java.getResource(file)
 }
 
 fun classpathResourcePath(file: String): String? {
     return classpathResource(file)?.path
 }
 
-class IndexPageRouterHandler(router: Router, private val engine: TemplateEngine) : RouterHandler(router) {
+class IndexPageRouterHandler(override val router: Router, private val engine: TemplateEngine) : RouterHandler {
 
     companion object {
         val log = LoggerFactory.getLogger(IndexPageRouterHandler::class.java)

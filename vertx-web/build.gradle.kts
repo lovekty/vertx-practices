@@ -9,7 +9,6 @@ plugins {
 
 
 dependencies {
-    implementation(kotlin("stdlib"))
     implementation("io.vertx:vertx-lang-kotlin")
     implementation("io.vertx:vertx-web")
     implementation("io.vertx:vertx-web-templ-thymeleaf")
