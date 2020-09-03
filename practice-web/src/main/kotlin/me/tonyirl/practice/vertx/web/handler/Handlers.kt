@@ -24,7 +24,7 @@ fun classpathResourcePath(file: String): String? {
 class IndexPageRouterHandler(override val router: Router, private val engine: TemplateEngine) : RouterHandler {
 
     companion object {
-        val log = LoggerFactory.getLogger(IndexPageRouterHandler::class.java)
+        val log = LoggerFactory.getLogger(IndexPageRouterHandler::class.java)!!
     }
 
     private fun indexPage(ctx: RoutingContext) {
