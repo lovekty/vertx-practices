@@ -3,6 +3,7 @@ package me.tonyirl.practice.vertx.core
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.Promise
 import io.vertx.core.Vertx
+import org.slf4j.LoggerFactory
 
 /**
  * @author tony.zhuby
@@ -11,11 +12,13 @@ import io.vertx.core.Vertx
 
 class HelloWorld : AbstractVerticle() {
     override fun start(promise: Promise<Void>?) {
-        println("Hello world")
+        log.info("Hello world")
         promise?.complete()
     }
 
     companion object {
+        val log = LoggerFactory.getLogger(HelloWorld::class.java)!!
+
         @JvmStatic
         fun main(args: Array<String>) {
             val vertx = Vertx.vertx()

@@ -13,7 +13,6 @@ dependencies {
     implementation("io.vertx:vertx-web")
     implementation("io.vertx:vertx-web-templ-thymeleaf")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl")
-    testImplementation("junit", "junit", "4.12")
 }
 
 val mainVerticleName = "me.tonyirl.practice.vertx.web.AppMain"
