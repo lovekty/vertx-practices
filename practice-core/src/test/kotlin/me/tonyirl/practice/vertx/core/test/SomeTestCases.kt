@@ -1,4 +1,4 @@
-package me.tonyirl.practice.vertx.core
+package me.tonyirl.practice.vertx.core.test.me.tonyirl.practice.vertx.core.test
 
 import io.vertx.core.Vertx
 import io.vertx.junit5.VertxExtension
