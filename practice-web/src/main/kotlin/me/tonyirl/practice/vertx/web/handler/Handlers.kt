@@ -5,21 +5,13 @@ import io.vertx.ext.web.RoutingContext
 import io.vertx.ext.web.common.template.TemplateEngine
 import io.vertx.kotlin.core.json.json
 import io.vertx.kotlin.core.json.obj
+import me.tonyirl.practice.vertx.common.classpathResourcePath
 import org.slf4j.LoggerFactory
-import java.net.URL
 
 /**
  * @author tony.zhuby
  * @date 2020/8/30
  */
-
-fun classpathResource(file: String): URL? {
-    return RouterHandler::class.java.getResource(file)
-}
-
-fun classpathResourcePath(file: String): String? {
-    return classpathResource(file)?.path
-}
 
 class IndexPageRouterHandler(override val router: Router, private val engine: TemplateEngine) : RouterHandler {
 
@@ -34,7 +26,7 @@ class IndexPageRouterHandler(override val router: Router, private val engine: Te
                 "age" to 31,
                 "type" to "admin"
             )
-        }, classpathResourcePath("/static/index.html")) {
+        }, classpathResourcePath("static/index.html")) {
             if (it.succeeded()) {
                 ctx.response().end(it.result())
             } else {

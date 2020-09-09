@@ -1,4 +1,4 @@
-package me.tonyirl.practice.vertx.core
+package me.tonyirl.practice.vertx.example
 
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.Promise

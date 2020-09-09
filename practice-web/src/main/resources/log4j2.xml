@@ -7,10 +7,8 @@
     </appenders>
 
     <loggers>
-        <root level="warn">
+        <root level="info">
             <appender-ref ref="console"/>
         </root>
-        <logger name="me.tonyirl" level="debug"/>
-        <logger name="io.vertx" level="debug"/>
     </loggers>
 </configuration>

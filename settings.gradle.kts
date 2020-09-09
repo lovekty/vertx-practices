@@ -1,3 +1,3 @@
 rootProject.name = "vertx-practices"
 
-include("practice-web", "practice-core")
+include("common", "simple-examples", "practice-web")

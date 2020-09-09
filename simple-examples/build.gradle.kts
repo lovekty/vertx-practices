@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":common"))
     implementation("io.vertx:vertx-lang-kotlin")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl")
     testImplementation("io.vertx:vertx-junit5")
