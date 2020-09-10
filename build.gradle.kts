@@ -1,8 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    `java-library`
+    java
     kotlin("jvm") version "1.3.30" apply false
+    id("com.github.johnrengelman.shadow") version "6.0.0" apply false
 }
 
 val vertxVersion = "3.9.2"
