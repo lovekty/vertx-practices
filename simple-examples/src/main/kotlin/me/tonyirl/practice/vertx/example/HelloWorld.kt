@@ -3,7 +3,7 @@ package me.tonyirl.practice.vertx.example
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.Promise
 import io.vertx.core.Vertx
-import org.slf4j.LoggerFactory
+import me.tonyirl.practice.vertx.common.log
 
 /**
  * @author tony.zhuby
@@ -17,8 +17,6 @@ class HelloWorld : AbstractVerticle() {
     }
 
     companion object {
-        val log = LoggerFactory.getLogger(HelloWorld::class.java)!!
-
         @JvmStatic
         fun main(args: Array<String>) {
             val vertx = Vertx.vertx()

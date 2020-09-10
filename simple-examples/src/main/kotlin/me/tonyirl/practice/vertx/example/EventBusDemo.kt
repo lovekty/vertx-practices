@@ -2,14 +2,13 @@ package me.tonyirl.practice.vertx.example.eventbus
 
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.Promise
-import org.slf4j.LoggerFactory
+import me.tonyirl.practice.vertx.common.log
 
 /**
  * @author tony.zhuby
  * @date 2020/9/5
  */
 
-val log = LoggerFactory.getLogger(EventBusDemoMain::class.java)!!
 
 class EventBusDemoMain : AbstractVerticle() {
     override fun start(promise: Promise<Void>?) {
