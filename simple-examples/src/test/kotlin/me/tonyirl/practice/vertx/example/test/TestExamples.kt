@@ -17,23 +17,25 @@ class TestExamples {
 
     @Test
     fun testTimer(vertx: Vertx, context: VertxTestContext) {
+        log.info("start。。。")
         val cdl = CountDownLatch(2)
         val start = System.currentTimeMillis()
-        vertx.setTimer(1000) {
-            log.info("timer id:${it} duration:${System.currentTimeMillis() - start}")
-            cdl.countDown()
-        }
         vertx.setTimer(2000) {
             log.info("timer id:${it} duration:${System.currentTimeMillis() - start}")
             cdl.countDown()
         }
+        vertx.setTimer(4000) {
+            log.info("timer id:${it} duration:${System.currentTimeMillis() - start}")
+            cdl.countDown()
+        }
         cdl.await()
-        log.info("count down to 0")
+        log.info("end。。。")
         context.completeNow()
     }
 
     @Test
     fun testPeriodic(vertx: Vertx, context: VertxTestContext) {
+        log.info("start。。。")
         val cdl = CountDownLatch(10)
         val start = System.currentTimeMillis()
         vertx.setPeriodic(500) {
@@ -44,12 +46,13 @@ class TestExamples {
             }
         }
         cdl.await()
-        log.info("count down to 0")
+        log.info("end。。。")
         context.completeNow()
     }
 
     @Test
     fun testFilesystem(vertx: Vertx, context: VertxTestContext) {
+        log.info("start。。。")
         val cdl = CountDownLatch(1)
         val fs = vertx.fileSystem()
         fs.readFile(classpathResourcePath("fsdemo.txt")) { ar ->
@@ -63,6 +66,17 @@ class TestExamples {
             }
         }
         cdl.await()
+        log.info("end。。。")
+        context.completeNow()
+    }
+
+    @Test
+    fun testxxx(vertx: Vertx, context: VertxTestContext) {
+        log.info("start。。。")
+        val cdl = CountDownLatch(1)
+        vertx.nettyEventLoopGroup()
+        cdl.await()
+        log.info("end。。。")
         context.completeNow()
     }
 

@@ -16,6 +16,10 @@ class EventBusDemoMain : AbstractVerticle() {
         vertx.deployVerticle(EventBusDemoProducer())
         promise?.complete()
     }
+
+    override fun stop(promise: Promise<Void>?) {
+
+    }
 }
 
 class EventBusDemoConsumer : AbstractVerticle() {
