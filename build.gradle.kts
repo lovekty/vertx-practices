@@ -6,7 +6,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "6.0.0" apply false
 }
 
-val vertxVersion = "3.9.2"
+val vertxVersion = "3.9.3"
 val log4jVersion = "2.13.3"
 
 allprojects {
