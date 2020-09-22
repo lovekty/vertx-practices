@@ -13,8 +13,8 @@ import me.tonyirl.practice.vertx.common.log
 class ExampleMain : AbstractVerticle() {
     override fun start(promise: Promise<Void>?) {
         vertx.deployVerticle(Consumer())
-        vertx.deployVerticle(Consumer2())
-//        vertx.deployVerticle(Producer())
+//        vertx.deployVerticle(Consumer2())
+        vertx.deployVerticle(Producer())
 //        vertx.deployVerticle(Producer2())
         promise?.complete()
     }
