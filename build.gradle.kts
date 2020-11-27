@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    java
-    kotlin("jvm") version "1.3.30" apply false
+    `java-library`
+    kotlin("jvm") version "1.4.20" apply false
     id("com.github.johnrengelman.shadow") version "6.0.0" apply false
 }
 
-val vertxVersion = "3.9.3"
+val vertxVersion = "4.0.0.CR2"
 val log4jVersion = "2.13.3"
 
 allprojects {
