@@ -25,7 +25,6 @@ application {
     mainClass.set(launcherClassName)
 }
 
-
 tasks.withType<ShadowJar> {
     archiveClassifier.set("fat")
     manifest {
