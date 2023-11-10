@@ -1,0 +1,25 @@
+[versions]
+kotlin = "1.7.21"
+kotlinx-coroutines = "1.6.4"
+vertx = "4.4.6"
+jackson = "2.15.0"
+slf4j = "2.0.7"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+
+vertx-bom = { module = "io.vertx:vertx-dependencies", version.ref = "vertx" }
+vertx-lang-kt = { module = "io.vertx:vertx-lang-kotlin", version.ref = "vertx" }
+vertx-web = { module = "io.vertx:vertx-web", version.ref = "vertx" }
+vertx-webtempl-thymeleaf = { module = "io.vertx:vertx-web-templ-thymeleaf", version.ref = "vertx" }
+
+vertx-test-junit5 = { module = "io.vertx:vertx-junit5", version.ref = "vertx" }
+
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+
+[bundles]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+shadow-jar = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }

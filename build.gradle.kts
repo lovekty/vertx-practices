@@ -1,32 +1,26 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 
 plugins {
-    `java-library`
-    kotlin("jvm") version "1.4.20" apply false
-    id("com.github.johnrengelman.shadow") version "6.1.0" apply false
+    java
+    alias { libs.plugins.kotlin.jvm } apply false
 }
 
 group = "me.tonyirl.practice.vertx"
 version = "1.0.0"
 
-val vertxVersion = "4.0.0.CR2"
-val log4jVersion = "2.13.3"
-
 subprojects {
-    apply<JavaLibraryPlugin>()
-
-    java {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
+    apply<JavaPlugin>()
 
     dependencies {
-        implementation(platform("io.vertx:vertx-dependencies:${vertxVersion}"))
-        implementation(platform("org.apache.logging.log4j:log4j:${log4jVersion}"))
+        implementation(platform(rootProject.libs.vertx.bom))
     }
 
-    tasks.withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+    extensions.findByType(KotlinJvmProjectExtension::class.java)?.apply {
+        jvmToolchain(11)
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
     }
 }
 

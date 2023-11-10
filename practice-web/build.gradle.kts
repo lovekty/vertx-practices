@@ -2,18 +2,16 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
     application
-    java
-    kotlin("jvm")
-    id("com.github.johnrengelman.shadow")
+    alias { libs.plugins.kotlin.jvm }
+    alias { libs.plugins.shadow.jar }
 }
-
 
 dependencies {
     implementation(project(":common"))
-    implementation("io.vertx:vertx-lang-kotlin")
-    implementation("io.vertx:vertx-web")
-    implementation("io.vertx:vertx-web-templ-thymeleaf")
-    implementation("org.apache.logging.log4j:log4j-slf4j-impl")
+    implementation(libs.vertx.lang.kt)
+    implementation(libs.vertx.web)
+    implementation(libs.vertx.webtempl.thymeleaf)
+    implementation(libs.slf4j.simple)
 }
 
 val mainVerticleName = "me.tonyirl.practice.vertx.web.AppMain"

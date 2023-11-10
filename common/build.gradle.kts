@@ -1,8 +1,7 @@
 plugins {
-    kotlin("jvm")
+    alias { libs.plugins.kotlin.jvm }
 }
 
 dependencies{
-    implementation("io.vertx:vertx-lang-kotlin")
-    implementation("org.slf4j:slf4j-api")
+    implementation(libs.slf4j.simple)
 }
