@@ -11,6 +11,7 @@ dependencies {
     implementation(libs.vertx.lang.kt)
     implementation(libs.vertx.web)
     implementation(libs.vertx.webtempl.thymeleaf)
+    implementation(libs.jackson.module.kotlin)
     implementation(libs.slf4j.simple)
 }
 

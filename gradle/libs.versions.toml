@@ -1,8 +1,8 @@
 [versions]
 kotlin = "1.7.21"
 kotlinx-coroutines = "1.6.4"
-vertx = "4.4.6"
-jackson = "2.15.0"
+vertx = "4.5.0"
+jackson = "2.15.3"
 slf4j = "2.0.7"
 
 [libraries]
@@ -15,6 +15,7 @@ vertx-webtempl-thymeleaf = { module = "io.vertx:vertx-web-templ-thymeleaf", vers
 
 vertx-test-junit5 = { module = "io.vertx:vertx-junit5", version.ref = "vertx" }
 
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
 [bundles]

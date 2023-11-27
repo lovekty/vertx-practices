@@ -6,8 +6,10 @@ plugins {
 dependencies {
     implementation(libs.vertx.lang.kt)
     implementation(libs.vertx.web)
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(libs.jackson.module.kotlin)
+    testImplementation(kotlin("test-junit5"))
+    testImplementation(libs.slf4j.simple)
+    testImplementation(libs.vertx.test.junit5)
 }
 
 val launcherClassName = "io.vertx.core.Launcher"

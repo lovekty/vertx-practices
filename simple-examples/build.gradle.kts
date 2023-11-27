@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":common"))
     implementation(libs.vertx.lang.kt)
+    implementation(libs.jackson.module.kotlin)
     implementation(libs.slf4j.simple)
     testImplementation(libs.vertx.test.junit5)
 }
